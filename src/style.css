@@ -22,8 +22,7 @@ h2 {
 }
 
 header {
-  height: 400px;
-  position: relative;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,12 +30,12 @@ header {
 
 .background-design {
   background-color: #0891b2;
-  height: 400px;
+  height: 1000px;
   width: 100%;
   position: absolute;
   top: -100px;
   left: 0;
-  transform: skewY(-5deg);
+  transform: skewY(-10deg) translateY(-600px);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   z-index: -1;
 }
@@ -70,7 +69,7 @@ header .image-container img {
 
 .about-me {
   background-color: white;
-  width: 500px;
+  max-width: 500px;
   min-height: 300px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 30px;
@@ -183,7 +182,7 @@ footer .contact {
   max-width: 600px;
   color: white;
   gap: 20px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 footer p > img {
@@ -203,6 +202,7 @@ footer .links {
   margin-top: 20px;
   display: flex;
   gap: 20px;
+  margin-bottom: 50px;
 }
 
 footer .links img {
@@ -210,32 +210,67 @@ footer .links img {
 }
 
 @media screen and (max-width: 1200px) {
-    .project-container{
-        grid-template-columns: 1fr 1fr;
-    }
+  .project-container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    header{
-        flex-direction: column;
-    }
+  header {
+    flex-direction: column;
+  }
 
-    :root{
-        font-size: 14px;
-    }
+  header .image-container h1 {
+    font-size: 4rem;
+  }
 
-    .project-container{
-        grid-template-columns: 1fr;
-    }
+  header .about-me {
+    box-shadow: none;
+    text-align: center;
+  }
 
-    footer{
-        flex-direction: column;
-    }
+  main h2 {
+    text-align: center;
+  }
 
-    footer picture img{
-        width: 100%;
-        height: auto;
-        position: absolute;
-        left: 0;
-    }
+  .about-me .links {
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  .about-me p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  footer h2 {
+    align-self: center;
+  }
+
+  footer picture img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+  }
+
+  footer p > img {
+    display: none;
+  }
+
+  footer .links {
+    justify-content: center;
+  }
 }
