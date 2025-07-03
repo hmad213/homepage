@@ -57,8 +57,9 @@ header .image-container h1 {
   bottom: 5px;
   left: 30px;
   font-family: "Roboto Flex", sans-serif;
-  color: rgb(0, 0, 0);
   font-weight: 300;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 header .image-container img {
@@ -165,6 +166,8 @@ footer {
   background-color: #0891b2;
   margin-top: 100px;
   justify-content: center;
+  max-height: 1000px;
+  word-wrap: break-word;
 }
 
 footer picture {
@@ -179,7 +182,8 @@ footer picture img {
 footer .contact {
   display: flex;
   flex-direction: column;
-  max-width: 600px;
+  max-width: 500px;
+  min-width: 250px;
   color: white;
   gap: 20px;
   font-size: 1.2rem;
@@ -209,7 +213,45 @@ footer .links img {
   width: 50px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) and (min-width: 601px) {
+  header {
+    display: block;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 100px;
+    padding-top: 100px;
+  }
+
+  header .image-container h1 {
+    transform: translate(270px, -250px);
+    color: white;
+    font-size: 2rem;
+    white-space: nowrap;
+  }
+
+  header h2 {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+  .about-me {
+    max-width: 1000px;
+  }
+
+  .about-me p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+
+  header .image-container {
+    float: left; /* added */
+    margin-right: -80px; /* space between image and text */
+    margin-bottom: -80px; /* spacing for small screens */
+    left: -100px;
+    top: -100px;
+  }
+
   .project-container {
     grid-template-columns: 1fr 1fr;
   }
@@ -253,6 +295,7 @@ footer .links img {
 
   footer {
     flex-direction: column;
+    padding-bottom: 0;
   }
 
   footer h2 {
