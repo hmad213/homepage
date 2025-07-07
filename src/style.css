@@ -183,15 +183,14 @@ footer .contact {
   display: flex;
   flex-direction: column;
   max-width: 500px;
-  min-width: 250px;
+  min-width: 225px;
   color: white;
   gap: 20px;
   font-size: 1.2rem;
 }
 
-footer p > img {
-  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(141deg)
-    brightness(102%) contrast(101%);
+footer p>img {
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(141deg) brightness(102%) contrast(101%);
   width: 30px;
   transform: translateY(10px);
   margin-right: 10px;
@@ -245,9 +244,9 @@ footer .links img {
   }
 
   header .image-container {
-    float: left; /* added */
-    margin-right: -80px; /* space between image and text */
-    margin-bottom: -80px; /* spacing for small screens */
+    float: left;
+    margin-right: -80px;
+    margin-bottom: -80px;
     left: -100px;
     top: -100px;
   }
@@ -309,7 +308,7 @@ footer .links img {
     left: 0;
   }
 
-  footer p > img {
+  footer p>img {
     display: none;
   }
 
